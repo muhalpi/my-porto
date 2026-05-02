@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Pe22xtGzMJu7QKj2qPlhO"
+uri = "file://artifacts/portfolio/public/project-1.png"
+type = "image"
+title = "Modern SaaS dashboard dark mode"
+
+[[generated]]
+id = "HgcEZKqYt0hBOEqZGf_Tr"
+uri = "file://artifacts/portfolio/public/project-2.png"
+type = "image"
+title = "Ecommerce mobile app dark theme"
+
+[[generated]]
+id = "i2IrtkT16FUCR7pqsFlTa"
+uri = "file://artifacts/portfolio/public/project-3.png"
+type = "image"
+title = "Web3 crypto wallet futuristic"
