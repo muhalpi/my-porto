@@ -328,24 +328,24 @@ function ProjectsSection() {
       category: "Web App · 2026",
       description: "An ATS-friendly CV generator built to help Indonesian job seekers create clean, professional resumes that pass applicant tracking systems. Designed with simplicity and local context in mind.",
         image: "/project-buatcv.webp",
-      tech: ["CV Generator", "ATS Optimized", "Web App"],
-      link: "#",
+        tech: ["CV Generator", "ATS Optimized", "Web App"],
+        link: "https://buatcv-ats.vercel.app/",
     },
     {
       title: "Dejitaru Shop",
       category: "E-Commerce · 2025–2026",
       description: "An online shop for digital products and needs. Curated digital goods delivered instantly — built to serve a growing market of Indonesian digital consumers looking for fast, reliable access to digital resources.",
         image: "/project-dejitaru-shop.webp",
-      tech: ["E-Commerce", "Digital Products", "Online Shop"],
-      link: "#",
+        tech: ["E-Commerce", "Digital Products", "Online Shop"],
+        link: "https://dejitarushop.vercel.app/",
     },
     {
       title: "Digital Buddies",
       category: "Consulting · 2023–2024",
       description: "A digital marketing consultancy helping small businesses and entrepreneurs build their online presence — from social media strategy to paid ads, branding, and content creation.",
         image: "/project-digital-buddies.webp",
-      tech: ["Digital Marketing", "Social Media", "Consulting"],
-      link: "#",
+        tech: ["Digital Marketing", "Social Media", "Consulting"],
+        link: "https://slcmarketinginc.com/jasa-pendampingan-tim-digital/",
     },
   ];
 
@@ -405,7 +405,7 @@ function ProjectsSection() {
                   ))}
                 </div>
                 <Button variant="outline" className="group border-primary/30 hover:bg-primary/10 hover:text-primary transition-all" asChild>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
                     View Project <ExternalLink className="ml-2 h-4 w-4 transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
