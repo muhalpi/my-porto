@@ -185,14 +185,13 @@ function AboutSection() {
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl bg-muted overflow-hidden relative group">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10"></div>
-              <div className="absolute inset-0 bg-secondary flex items-center justify-center">
-                <div className="w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px]"></div>
-                <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-20">
-                  <div className="text-7xl font-black tracking-tighter text-primary/30 select-none">m.alpi</div>
-                  <div className="text-sm text-muted-foreground/50 tracking-widest uppercase font-medium">Muhammad Alfi</div>
-                </div>
-              </div>
+              <img
+                src="/profile-main.jpg"
+                alt="Muhammad Alfi portrait"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
             </div>
 
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-full mix-blend-screen filter blur-[40px] opacity-50"></div>
