@@ -186,7 +186,7 @@ function AboutSection() {
             <div className="aspect-[4/5] rounded-2xl bg-muted overflow-hidden relative group">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10"></div>
               <img
-                src="/profile-main.jpg"
+                src="/profile-main.webp"
                 alt="Muhammad Alfi portrait"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -548,24 +548,34 @@ function ExperienceSection() {
 function GallerySection() {
   const galleryItems = [
     {
-      src: "/gallery/floortech-1.png",
-      alt: "Floortech event demo session with visitors",
-      caption: "On-site demo session",
+      src: "/gallery/content-talent-slc.webp",
+      alt: "Content talent session at SLC Marketing",
+      caption: "Content Talent · SLC Marketing",
     },
     {
-      src: "/gallery/floortech-2.png",
-      alt: "Floortech exhibition interaction with attendees",
-      caption: "Exhibition interaction",
+      src: "/gallery/international-floor-tech-2024-b.webp",
+      alt: "International Floor Tech 2024 booth interaction",
+      caption: "International Floor Tech 2024",
     },
     {
-      src: "/gallery/floortech-3.png",
-      alt: "Floortech event photo with International Flooring Technology branding",
-      caption: "International Flooring Technology booth",
+      src: "/gallery/international-floor-tech-2024.webp",
+      alt: "International Floor Tech 2024 day 4 event",
+      caption: "International Floor Tech 2024 · Day 4",
     },
     {
-      src: "/gallery/floortech-4.png",
-      alt: "Floortech Indonesia day 4 event moment",
-      caption: "Floortech Indonesia day 4",
+      src: "/gallery/ama-leadership-summit-2023.webp",
+      alt: "AMA Leadership Summit 2023 team photo",
+      caption: "AMA Leadership Summit 2023",
+    },
+    {
+      src: "/gallery/portfolio-connectpedia.webp",
+      alt: "Connectpedia portfolio snapshot",
+      caption: "Portfolio · Connectpedia",
+    },
+    {
+      src: "/gallery/portfolio-slc.webp",
+      alt: "SLC Marketing portfolio snapshot",
+      caption: "Portfolio · SLC Marketing",
     },
   ];
 
@@ -581,7 +591,7 @@ function GallerySection() {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Event Gallery.</h2>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Moments from Floortech Indonesia and on-site brand activation.
+            Highlights from my content, event, and brand activation work.
           </p>
         </motion.div>
 
