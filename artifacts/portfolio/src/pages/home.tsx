@@ -44,6 +44,7 @@ export default function Home() {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <GallerySection />
         <ExperienceSection />
         <ContactSection />
       </main>
@@ -539,6 +540,75 @@ function ExperienceSection() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GallerySection() {
+  const galleryItems = [
+    {
+      src: "/gallery/floortech-1.png",
+      alt: "Floortech event demo session with visitors",
+      caption: "On-site demo session",
+    },
+    {
+      src: "/gallery/floortech-2.png",
+      alt: "Floortech exhibition interaction with attendees",
+      caption: "Exhibition interaction",
+    },
+    {
+      src: "/gallery/floortech-3.png",
+      alt: "Floortech event photo with International Flooring Technology branding",
+      caption: "International Flooring Technology booth",
+    },
+    {
+      src: "/gallery/floortech-4.png",
+      alt: "Floortech Indonesia day 4 event moment",
+      caption: "Floortech Indonesia day 4",
+    },
+  ];
+
+  return (
+    <section id="gallery" className="py-32 relative">
+      <div className="container mx-auto px-6 md:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Event Gallery.</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+            Moments from Floortech Indonesia and on-site brand activation.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {galleryItems.map((item, index) => (
+            <motion.figure
+              key={item.src}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              className="group"
+            >
+              <div className="rounded-2xl overflow-hidden border border-border/50 bg-card">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-muted-foreground">
+                {item.caption}
+              </figcaption>
+            </motion.figure>
+          ))}
         </div>
       </div>
     </section>
