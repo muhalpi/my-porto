@@ -171,7 +171,7 @@ function AboutSection() {
               </div>
               <div className="w-px bg-border"></div>
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-primary mb-2">3</span>
+                <span className="text-4xl font-bold text-primary mb-2">4</span>
                 <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Projects</span>
               </div>
               <div className="w-px bg-border"></div>
@@ -324,6 +324,15 @@ function SkillsSection() {
 function ProjectsSection() {
   const projects = [
     {
+      title: "Hitung Pajak",
+      category: "Tax Calculator - 2026",
+      description:
+        "An all-in-one Indonesian tax calculator for quick simulations and pre-filing reviews. Runs fully in the browser with no personal data and no backend, covering PPh 21/26, PPh 22, PPh 23, Final 4(2), PPN, and PPNBM using current DJP-style formulas.",
+      image: "/project-hitung-pajak.png",
+      tech: ["Tax Calculator", "Client-side", "Privacy-first"],
+	  link: "https://hitung-pajak.alpi-muh.workers.dev/",
+    },
+    {
       title: "BuatCV",
       category: "Web App · 2026",
       description: "An ATS-friendly CV generator built to help Indonesian job seekers create clean, professional resumes that pass applicant tracking systems. Designed with simplicity and local context in mind.",
@@ -404,11 +413,13 @@ function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <Button variant="outline" className="group border-primary/30 hover:bg-primary/10 hover:text-primary transition-all" asChild>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    View Project <ExternalLink className="ml-2 h-4 w-4 transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
+                {project.link ? (
+                  <Button variant="outline" className="group border-primary/30 hover:bg-primary/10 hover:text-primary transition-all" asChild>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      View Project <ExternalLink className="ml-2 h-4 w-4 transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                ) : null}
               </div>
             </motion.div>
           ))}
