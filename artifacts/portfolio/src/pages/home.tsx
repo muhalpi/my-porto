@@ -324,6 +324,15 @@ function SkillsSection() {
 function ProjectsSection() {
   const projects = [
     {
+      title: "MalpiTools",
+      category: "Browser Tools - 2026",
+      description:
+        "A collection of 50+ small, low-stakes, low-effort tools for everyday tasks. Built to be useful without friction: no logins, no registration, and no data collection.",
+      image: "/project-malpitools.png",
+      tech: ["50+ Tools", "No Login", "Privacy-first"],
+      link: "https://malpitools.vercel.app/",
+    },
+    {
       title: "Hitung Pajak",
       category: "Tax Calculator - 2026",
       description:
