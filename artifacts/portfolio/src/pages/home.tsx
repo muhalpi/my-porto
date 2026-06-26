@@ -31,9 +31,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden selection:bg-primary/30">
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[100] bg-gradient-to-r from-[#8c4dff] to-[#19b8ff] shadow-[0_0_22px_rgba(140,77,255,0.58)]"
         style={{ scaleX }}
       />
+      <FloatingScrollbar />
 
       <div className="fixed inset-0 pointer-events-none z-40 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
@@ -51,6 +52,86 @@ export default function Home() {
 
       <Footer />
     </div>
+  );
+}
+
+function FloatingScrollbar() {
+  const [scrollbar, setScrollbar] = useState({
+    canScroll: false,
+    thumbHeight: 0,
+    thumbTop: 0,
+    visible: false,
+  });
+
+  useEffect(() => {
+    let scrollIdleTimeout: number | undefined;
+
+    const updateScrollbar = () => {
+      const { scrollHeight } = document.documentElement;
+      const viewportHeight = window.innerHeight;
+      const scrollable = scrollHeight - viewportHeight;
+      const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+      const trackHeight = Math.max(0, viewportHeight - 16);
+      const thumbHeight =
+        scrollable > 0
+          ? Math.max(44, Math.round((viewportHeight / scrollHeight) * trackHeight))
+          : 0;
+      const thumbTop =
+        scrollable > 0 ? progress * Math.max(0, trackHeight - thumbHeight) : 0;
+
+      setScrollbar((current) => ({
+        ...current,
+        canScroll: scrollable > 0,
+        thumbHeight,
+        thumbTop,
+      }));
+    };
+
+    const showScrollbar = () => {
+      document.documentElement.classList.add("is-scrolling");
+      setScrollbar((current) => ({ ...current, visible: true }));
+
+      if (scrollIdleTimeout) {
+        window.clearTimeout(scrollIdleTimeout);
+      }
+
+      scrollIdleTimeout = window.setTimeout(() => {
+        document.documentElement.classList.remove("is-scrolling");
+        setScrollbar((current) => ({ ...current, visible: false }));
+      }, 900);
+    };
+
+    const handleScroll = () => {
+      updateScrollbar();
+      showScrollbar();
+    };
+
+    updateScrollbar();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", updateScrollbar);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateScrollbar);
+      document.documentElement.classList.remove("is-scrolling");
+
+      if (scrollIdleTimeout) {
+        window.clearTimeout(scrollIdleTimeout);
+      }
+    };
+  }, []);
+
+  return (
+    <span
+      aria-hidden="true"
+      className={`floating-scrollbar${
+        scrollbar.visible && scrollbar.canScroll ? " is-visible" : ""
+      }`}
+      style={{
+        height: `${scrollbar.thumbHeight}px`,
+        transform: `translateY(${scrollbar.thumbTop}px)`,
+      }}
+    />
   );
 }
 
@@ -72,7 +153,7 @@ function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold tracking-tighter">
+        <a href="https://malpi.my.id/" className="text-xl font-bold tracking-tighter">
           m<span className="text-primary">.</span>alpi
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -171,7 +252,7 @@ function AboutSection() {
               </div>
               <div className="w-px bg-border"></div>
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-primary mb-2">4</span>
+                <span className="text-4xl font-bold text-primary mb-2">6</span>
                 <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Projects</span>
               </div>
               <div className="w-px bg-border"></div>
@@ -331,6 +412,15 @@ function ProjectsSection() {
       image: "/project-malpitools.png",
       tech: ["50+ Tools", "No Login", "Privacy-first"],
       link: "https://malpitools.vercel.app/",
+    },
+    {
+      title: "TempMailPi",
+      category: "Temporary Mail - 2026",
+      description:
+        "A Cloudflare-native disposable inbox for privacy checks, tests, and one-off signups. Messages expire automatically with no registration, tracking scripts, or persistent containers required.",
+      image: "/project-tempmailpi.png",
+      tech: ["Temporary Email", "Cloudflare Native", "No Registration"],
+      link: "https://malpi.my.id/mail/",
     },
     {
       title: "Hitung Pajak",

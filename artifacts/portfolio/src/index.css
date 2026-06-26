@@ -157,22 +157,57 @@
   
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+html.is-scrolling {
+  scrollbar-width: none;
 }
-::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 4px;
+
+html::-webkit-scrollbar-track {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--secondary));
+
+html::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: transparent;
+  background-clip: content-box;
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.34);
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.floating-scrollbar {
+  position: fixed;
+  top: 8px;
+  right: 7px;
+  z-index: 101;
+  width: 7px;
+  min-height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    background 180ms ease;
+}
+
+.floating-scrollbar.is-visible {
+  opacity: 1;
 }
 
 @layer utilities {
@@ -182,5 +217,11 @@
   
   .box-glow {
     box-shadow: 0 0 30px hsla(var(--primary) / 0.15);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .floating-scrollbar {
+    display: none;
   }
 }
