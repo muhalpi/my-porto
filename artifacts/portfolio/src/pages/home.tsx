@@ -36,8 +36,6 @@ export default function Home() {
       />
       <FloatingScrollbar />
 
-      <div className="fixed inset-0 pointer-events-none z-40 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-
       <Navbar />
 
       <main>
@@ -272,7 +270,6 @@ function AboutSection() {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
             </div>
 
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-full mix-blend-screen filter blur-[40px] opacity-50"></div>
@@ -405,13 +402,13 @@ function SkillsSection() {
 function ProjectsSection() {
   const projects = [
     {
-      title: "MalpiTools",
-      category: "Browser Tools - 2026",
+      title: "Hitung Syariah",
+      category: "Islamic Inheritance Calculator - 2026",
       description:
-        "A collection of 50+ small, low-stakes, low-effort tools for everyday tasks. Built to be useful without friction: no logins, no registration, and no data collection.",
-      image: "/project-malpitools.png",
-      tech: ["50+ Tools", "No Login", "Privacy-first"],
-      link: "https://malpitools.vercel.app/",
+        "A privacy-first Islamic inheritance calculator for Indonesian families, combining KHI guidance and faraidh rules with clear calculation steps, legal references, and local browser storage.",
+      image: "/project-hitung-syariah.png",
+      tech: ["Faraidh", "KHI Indonesia", "Privacy-first"],
+      link: "https://syariah.malpi.my.id/",
     },
     {
       title: "TempMailPi",
@@ -421,6 +418,15 @@ function ProjectsSection() {
       image: "/project-tempmailpi.png",
       tech: ["Temporary Email", "Cloudflare Native", "No Registration"],
       link: "https://malpi.my.id/mail/",
+    },
+    {
+      title: "MalpiTools",
+      category: "Browser Tools - 2026",
+      description:
+        "A collection of 50+ small, low-stakes, low-effort tools for everyday tasks. Built to be useful without friction: no logins, no registration, and no data collection.",
+      image: "/project-malpitools.png",
+      tech: ["50+ Tools", "No Login", "Privacy-first"],
+      link: "https://malpitools.vercel.app/",
     },
     {
       title: "Hitung Pajak",
