@@ -1,0 +1,359 @@
+{
+  "navbar": {
+    "brandLabel": "m.alpi",
+    "brandHref": "https://malpi.my.id/",
+    "links": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Skills",
+        "href": "#skills"
+      },
+      {
+        "label": "Projects",
+        "href": "#projects"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      }
+    ],
+    "cta": {
+      "label": "Let's Talk",
+      "href": "#contact"
+    }
+  },
+  "hero": {
+    "location": "Surabaya, Indonesia",
+    "availability": "Open to opportunities",
+    "titlePrefix": "I grow brands",
+    "titleHighlight": "digitally.",
+    "description": "Digital Marketer & IT professional with 5+ years building brand presence across social media, paid ads, and content - backed by a strong technical foundation in networking and accounting.",
+    "primaryCta": {
+      "label": "View My Work",
+      "href": "#projects"
+    },
+    "secondaryCta": {
+      "label": "Get In Touch",
+      "href": "#contact"
+    }
+  },
+  "about": {
+    "heading": "Marketing is strategy,\nnot just content.",
+    "paragraphs": [
+      "I'm Muhammad Alfi - a Digital Marketer and IT professional from Surabaya. With a background in both Computer Networking (SMK) and Accounting (S1, GPA 3.79), I approach marketing analytically: I don't just create content, I craft systems that drive real results.",
+      "Over 5 years across agencies and corporate brands, I've managed multi-platform social media, led paid ad campaigns, built creative assets, and coordinated teams - all while keeping a close eye on data and performance. Adobe Certified Professional. Instinctively technical. Always learning."
+    ],
+    "stats": [
+      {
+        "value": "5+",
+        "label": "Years Exp"
+      },
+      {
+        "value": "6",
+        "label": "Projects"
+      },
+      {
+        "value": "5",
+        "label": "Certifications"
+      }
+    ],
+    "image": "/profile-main.webp",
+    "imageAlt": "Muhammad Alfi portrait",
+    "badges": [
+      {
+        "eyebrow": "Certified",
+        "title": "Adobe Professional",
+        "detail": "ACP 2024"
+      },
+      {
+        "eyebrow": "Education",
+        "title": "S1 Accounting",
+        "detail": "GPA 3.79 / 4.00"
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Tools of the trade.",
+    "description": "From campaign strategy to creative execution - I work across the full digital marketing stack. Technically grounded, creatively driven, and data-informed in everything I do.",
+    "groups": [
+      {
+        "category": "Digital Marketing",
+        "skills": [
+          {
+            "name": "Meta Ads",
+            "icon": "meta",
+            "color": "#0081FB"
+          },
+          {
+            "name": "Google Ads",
+            "icon": "googleads",
+            "color": "#4285F4"
+          },
+          {
+            "name": "Analytics",
+            "icon": "googleanalytics",
+            "color": "#E37400"
+          },
+          {
+            "name": "TikTok",
+            "icon": "tiktok",
+            "color": "#69C9D0"
+          },
+          {
+            "name": "Instagram",
+            "icon": "instagram",
+            "color": "#E1306C"
+          },
+          {
+            "name": "YouTube",
+            "icon": "youtube",
+            "color": "#FF0000"
+          }
+        ]
+      },
+      {
+        "category": "Design & Creative",
+        "skills": [
+          {
+            "name": "Figma",
+            "icon": "figma",
+            "color": "#F24E1E"
+          },
+          {
+            "name": "Canva",
+            "icon": "canva",
+            "color": "#00C4CC"
+          }
+        ]
+      }
+    ],
+    "competencies": [
+      "SEO & SEM Optimization",
+      "Social Media Strategy",
+      "Copywriting & Content",
+      "Paid Ads Management",
+      "Data Analytics & Reporting",
+      "IT & Networking",
+      "Business Administration",
+      "Event Coordination"
+    ]
+  },
+  "projects": {
+    "heading": "Selected Work.",
+    "description": "Projects I've built and launched - each one solving a real problem for a real audience.",
+    "items": [
+      {
+        "title": "Hitung Syariah",
+        "category": "Islamic Inheritance Calculator - 2026",
+        "description": "A privacy-first Islamic inheritance calculator for Indonesian families, combining KHI guidance and faraidh rules with clear calculation steps, legal references, and local browser storage.",
+        "image": "/project-hitung-syariah.png",
+        "tech": [
+          "Faraidh",
+          "KHI Indonesia",
+          "Privacy-first"
+        ],
+        "link": "https://syariah.malpi.my.id/"
+      },
+      {
+        "title": "TempMailPi",
+        "category": "Temporary Mail - 2026",
+        "description": "A Cloudflare-native disposable inbox for privacy checks, tests, and one-off signups. Messages expire automatically with no registration, tracking scripts, or persistent containers required.",
+        "image": "/project-tempmailpi.png",
+        "tech": [
+          "Temporary Email",
+          "Cloudflare Native",
+          "No Registration"
+        ],
+        "link": "https://malpi.my.id/mail/"
+      },
+      {
+        "title": "MalpiTools",
+        "category": "Browser Tools - 2026",
+        "description": "A collection of 50+ small, low-stakes, low-effort tools for everyday tasks. Built to be useful without friction: no logins, no registration, and no data collection.",
+        "image": "/project-malpitools.png",
+        "tech": [
+          "50+ Tools",
+          "No Login",
+          "Privacy-first"
+        ],
+        "link": "https://malpitools.vercel.app/"
+      },
+      {
+        "title": "Hitung Pajak",
+        "category": "Tax Calculator - 2026",
+        "description": "An all-in-one Indonesian tax calculator for quick simulations and pre-filing reviews. Runs fully in the browser with no personal data and no backend, covering PPh 21/26, PPh 22, PPh 23, Final 4(2), PPN, and PPNBM using current DJP-style formulas.",
+        "image": "/project-hitung-pajak.png",
+        "tech": [
+          "Tax Calculator",
+          "Client-side",
+          "Privacy-first"
+        ],
+        "link": "https://hitung-pajak.alpi-muh.workers.dev/"
+      },
+      {
+        "title": "BuatCV",
+        "category": "Web App - 2026",
+        "description": "An ATS-friendly CV generator built to help Indonesian job seekers create clean, professional resumes that pass applicant tracking systems. Designed with simplicity and local context in mind.",
+        "image": "/project-buatcv.webp",
+        "tech": [
+          "CV Generator",
+          "ATS Optimized",
+          "Web App"
+        ],
+        "link": "https://buatcv-ats.vercel.app/"
+      },
+      {
+        "title": "Dejitaru Shop",
+        "category": "E-Commerce - 2025-2026",
+        "description": "An online shop for digital products and needs. Curated digital goods delivered instantly - built to serve a growing market of Indonesian digital consumers looking for fast, reliable access to digital resources.",
+        "image": "/project-dejitaru-shop.webp",
+        "tech": [
+          "E-Commerce",
+          "Digital Products",
+          "Online Shop"
+        ],
+        "link": "https://dejitarushop.vercel.app/"
+      },
+      {
+        "title": "Digital Buddies",
+        "category": "Consulting - 2023-2024",
+        "description": "A digital marketing consultancy helping small businesses and entrepreneurs build their online presence - from social media strategy to paid ads, branding, and content creation.",
+        "image": "/project-digital-buddies.webp",
+        "tech": [
+          "Digital Marketing",
+          "Social Media",
+          "Consulting"
+        ],
+        "link": "https://slcmarketinginc.com/jasa-pendampingan-tim-digital/"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Gallery.",
+    "description": "Highlights from my content, event, and brand activation work.",
+    "items": [
+      {
+        "src": "/gallery/content-talent-slc.webp",
+        "alt": "Content talent session at SLC Marketing",
+        "caption": "Content Talent - SLC Marketing"
+      },
+      {
+        "src": "/gallery/international-floor-tech-2024-b.webp",
+        "alt": "International Floor Tech 2024 booth interaction",
+        "caption": "International Floor Tech 2024"
+      },
+      {
+        "src": "/gallery/international-floor-tech-2024.webp",
+        "alt": "International Floor Tech 2024 day 4 event",
+        "caption": "International Floor Tech 2024 - Day 4"
+      },
+      {
+        "src": "/gallery/ama-leadership-summit-2023.webp",
+        "alt": "AMA Leadership Summit 2023 team photo",
+        "caption": "AMA Leadership Summit 2023"
+      },
+      {
+        "src": "/gallery/portfolio-connectpedia.webp",
+        "alt": "Connectpedia portfolio snapshot",
+        "caption": "Portfolio - Connectpedia"
+      },
+      {
+        "src": "/gallery/portfolio-slc.webp",
+        "alt": "SLC Marketing portfolio snapshot",
+        "caption": "Portfolio - SLC Marketing"
+      }
+    ]
+  },
+  "experience": {
+    "heading": "Experience.",
+    "workLabel": "Work",
+    "educationLabel": "Education",
+    "certificationsLabel": "Certifications",
+    "work": [
+      {
+        "role": "Digital Marketing",
+        "company": "PT Pera Abadi Sentausa",
+        "period": "Jul 2024 - Present",
+        "description": "Managing the full digital ecosystem for a new construction industry brand - from visual design and copywriting to paid ads, exhibition coordination, and on-site technical sales support."
+      },
+      {
+        "role": "Digital Manager",
+        "company": "SLC Marketing, Inc.",
+        "period": "Jan 2020 - Mar 2024",
+        "description": "Led digital strategy for 2 company brands across Facebook, Instagram, Twitter, LinkedIn, TikTok, and YouTube. Managed paid ad campaigns on social media and Google Ads, led the content team, and served as a brand talent for video content."
+      }
+    ],
+    "education": [
+      {
+        "degree": "S1 Akuntansi",
+        "institution": "Universitas Wijaya Putra",
+        "period": "2021 - 2025",
+        "detail": "GPA 3.79 / 4.00"
+      },
+      {
+        "degree": "SMK Teknik Komputer dan Jaringan",
+        "institution": "SMK Negeri 2 Surabaya",
+        "period": "2016 - 2019",
+        "detail": "GPA 3.53 / 4.00"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Adobe Certified Professional (ACP)",
+        "org": "Adobe",
+        "year": "2024"
+      },
+      {
+        "name": "Ujian Standar Keahlian Akuntansi Dasar",
+        "org": "IAI Jawa Timur",
+        "year": "2025"
+      },
+      {
+        "name": "Marketing Analyst Academy (MAA) Batch 9",
+        "org": "SLC Marketing, Inc.",
+        "year": "2022"
+      },
+      {
+        "name": "Junior Network Administrator",
+        "org": "Digitalent VSGA Kominfo",
+        "year": "2019"
+      },
+      {
+        "name": "Junior Networking",
+        "org": "BNSP",
+        "year": "2019"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Let's work together.",
+    "description": "Whether you need a digital marketing strategy, a creative campaign, or someone who gets both the creative and technical side - I'd love to hear about your project.",
+    "email": "alpi.muh@gmail.com",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "https://linkedin.com/in/muhammad-alfi/"
+  },
+  "footer": {
+    "brandLabel": "m.alpi",
+    "copyrightName": "Muhammad Alfi",
+    "socials": [
+      {
+        "type": "github",
+        "href": "https://github.com/muhalpi",
+        "label": "GitHub"
+      },
+      {
+        "type": "linkedin",
+        "href": "https://linkedin.com/in/muhammad-alfi/",
+        "label": "LinkedIn"
+      },
+      {
+        "type": "mail",
+        "href": "mailto:alpi.muh@gmail.com",
+        "label": "Email"
+      }
+    ]
+  }
+}

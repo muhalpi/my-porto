@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,11 +7,21 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 
 const queryClient = new QueryClient();
+const DevPortfolioManager = import.meta.env.DEV
+  ? lazy(() => import("@/pages/portfolio-manager"))
+  : undefined;
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      {DevPortfolioManager ? (
+        <Route path="/manager">
+          <Suspense fallback={null}>
+            <DevPortfolioManager />
+          </Suspense>
+        </Route>
+      ) : null}
       <Route component={NotFound} />
     </Switch>
   );
